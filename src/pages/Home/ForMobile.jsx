@@ -242,8 +242,8 @@ const ForMobile = () => {
                         mapTypeControl: false,
                         fullscreenControl: false,
                         minZoom: 3,
-                        gestureHandling: "cooperative",
                     }}
+                    gestureHandling="auto"
                     mapContainerStyle={{
                         width: "100%",
                         height: `${store.issearch ? "73%" : "80%"}`,

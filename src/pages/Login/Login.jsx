@@ -2,11 +2,12 @@ import evcharge from "../../assets/evcharge.gif";
 import { motion } from "framer-motion";
 import Input from "../../components/Input";
 import { Store } from "../../store/store";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { gsap } from "gsap";
+
 export const Login = () => {
     const store = Store();
-
     const navigate = useNavigate();
     const [loginData, setLoginData] = useState({
         email: "",
@@ -29,25 +30,29 @@ export const Login = () => {
         });
     };
 
+    useEffect(() => {
+        gsap.from(".form-container", { duration: 1, opacity: 0, y: 50 });
+    }, []);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-screen h-[100dvh] border-solid "
+            className="w-screen h-screen border-solid"
         >
-            <div className=" w-full h-[20%] bg-white flex flex-row justify-around items-center">
+            <div className="w-full h-[20%] bg-white flex flex-row justify-around items-center">
                 <img src={evcharge} alt="" />
             </div>
 
             <div className="w-full h-[80%] " id="register">
                 <div className="w-full h-[20%]  rounded-t-md flex flex-row justify-around items-center">
-                    <p className="  poppins-black text-[40px]  " id="strok">
+                    <p className="poppins-black text-[40px]" id="strok">
                         Login
                     </p>
                 </div>
 
-                <div className="w-full h-[80%] p-5 flex flex-col gap-4 ">
+                <div className="w-full h-[80%] p-5 flex flex-col gap-4 form-container">
                     <form onSubmit={handlelogin}>
                         <Input
                             id="email"
@@ -75,7 +80,7 @@ export const Login = () => {
                         />
 
                         <div className="w-full flex flex-row justify-around items-center mt-6">
-                            <button className="w- rounded-2xl  flex justify-between items-center poppins-medium text-2xl text-coswhite bg-cosgreen p-5">
+                            <button className="w- rounded-2xl flex justify-between items-center poppins-medium text-2xl text-coswhite bg-cosgreen p-5">
                                 Login
                             </button>
                         </div>

@@ -12,7 +12,8 @@ import back from "../../assets/profile/back.png";
 function Bookmark() {
     const navigate = useNavigate();
     const store = Store();
-    const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+    const bookmark = JSON.parse(localStorage.getItem("bookmarks")) || [];
+    const bookmarks = bookmark.filter((item) => item.type === "cng");
 
     const handleRemoveBookmark = async (stationId) => {
         const query = {

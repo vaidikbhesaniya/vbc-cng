@@ -86,7 +86,7 @@ export default function SideBar() {
                     className="w-[80px] mt-4 mb-4 rounded-lg"
                 />
                 <p className="poppins-medium text-cosgreen text-[15px] mb-4">
-                    Ev Charging Station Near me
+                    CNG Station Near me
                 </p>
             </div>
 

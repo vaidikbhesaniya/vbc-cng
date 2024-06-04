@@ -22,7 +22,7 @@ const LandingPage = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className="w-full h-[43%] m-auto overflow-hidden">
+            <div className="w-full h-[43%] m-auto overflow-hidden flex justify-center items-center">
                 <img src={car} alt="" className="" />
             </div>
 

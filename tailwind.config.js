@@ -20,7 +20,7 @@ export default {
                 poppins: ["Poppins", "sans-serif"],
             },
             colors: {
-                primary: "#79b400",
+                primary: "#679b13",
                 cosgreen: "#24671a",
                 coswhite: "#e4f0cc",
                 darkgreen: "#1e532d",

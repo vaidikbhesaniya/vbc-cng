@@ -18,7 +18,7 @@ import MapboxDirections from "@mapbox/mapbox-sdk/services/directions";
 const ForMobile = () => {
     const navigate = useNavigate();
     const map = useRef(null);
-    const evStations = station_data.filter((station) => station.type === "ev");
+    const evStations = station_data.filter((station) => station.type === "cng");
     const [searchQuery, setSearchQuery] = useState("");
     const [filteredStations, setFilteredStations] = useState(station_data);
     const [loading, setLoading] = useState(true); // Add loading state

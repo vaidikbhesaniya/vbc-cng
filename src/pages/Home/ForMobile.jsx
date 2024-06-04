@@ -130,8 +130,8 @@ const ForMobile = () => {
                     icon: {
                         url: getMarkerIcon(station.type),
                         scaledSize: {
-                            width: 32,
-                            height: 32,
+                            width: 50,
+                            height: 50,
                         },
                     },
                 });
@@ -145,7 +145,7 @@ const ForMobile = () => {
 
             new MarkerClusterer({ map, markers });
         }
-    }, [isLoaded, map, evStations]);
+    }, [evStations, isLoaded, map]);
 
     return (
         <div className="w-[100dvw] h-[100dvh]">

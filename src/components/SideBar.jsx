@@ -42,7 +42,7 @@ export default function SideBar() {
             icon: premium,
         },
         {
-            title: "Add Ev Station",
+            title: "Add CNG Station",
             path: "/login",
             icon: addcharging,
         },

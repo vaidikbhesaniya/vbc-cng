@@ -18,6 +18,7 @@ import AllStations from "./pages/AllStations/AllStations";
 import Bookmark from "./pages/Bookmark/Bookmark";
 import Chat from "./pages/Chat";
 import ForMobile from "./pages/Home/ForMobile";
+import Privacy from "./pages/Privacy/Privacy";
 export const AnimatedRoutes = () => {
     const store = Store();
     const navigate = useNavigate();
@@ -51,6 +52,7 @@ export const AnimatedRoutes = () => {
             <Route path="/station/:stationId" element={<StationDetail />} />
             <Route path="/bookmark" element={<Bookmark />} />
             <Route path="/chat" element={<Chat />}></Route>
+            <Route path="/privacy" element={<Privacy />}></Route>
         </Routes>
         //
     );

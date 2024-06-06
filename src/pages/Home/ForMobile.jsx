@@ -15,7 +15,6 @@ import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import {
     useJsApiLoader,
     GoogleMap,
-    Marker,
     DirectionsRenderer,
 } from "@react-google-maps/api";
 import Popup from "../../components/Popup";

@@ -62,6 +62,21 @@ const ForMobile = () => {
         fetchData();
     }, []);
 
+
+
+    useEffect(() => {
+        // if (store.user) {
+        //     navigate("/home");
+        // }
+        // store.get
+        // console.log(store.user);
+
+        async function datafetch() {
+            await store.getUser(navigate);
+        }
+        datafetch();
+    }, []);
+
     useEffect(() => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(

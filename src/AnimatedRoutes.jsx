@@ -20,22 +20,7 @@ import Chat from "./pages/Chat";
 import ForMobile from "./pages/Home/ForMobile";
 import Privacy from "./pages/Privacy/Privacy";
 export const AnimatedRoutes = () => {
-    const store = Store();
-    const navigate = useNavigate();
-
-    const location = useLocation();
-    useEffect(() => {
-        // if (store.user) {
-        //     navigate("/home");
-        // }
-        // store.get
-        // console.log(store.user);
-
-        async function datafetch() {
-            await store.getUser(navigate);
-        }
-        datafetch();
-    }, []);
+   
 
     return (
         <Routes>

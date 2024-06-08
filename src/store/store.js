@@ -128,11 +128,7 @@ export const Store = create((set) => ({
                 Store.getState().handleGetstations();
                 redirect("/Home");
             })
-            .catch((err) => {
-                if (err.response)
-                    return toast.error(err.response?.data?.message);
-                return toast.error("Internal server error");
-            })
+            .catch(() => {})
             .finally(() => {
                 // set({ isLoading: false });
             });
@@ -149,10 +145,8 @@ export const Store = create((set) => ({
                     // console.log(Store.getState().user);
                     navigate("/home");
                 })
-                .catch((err) => {
+                .catch(() => {
                     navigate("/");
-                    if (err.response)
-                        return toast.error(err.response?.data?.message);
                 })
                 .finally(() => {
                     // set({ isLoading: false });
@@ -167,10 +161,7 @@ export const Store = create((set) => ({
                 toast.success(res.data?.message);
                 Store.getState().setUser(res.data.user);
             })
-            .catch((err) => {
-                if (err.response)
-                    return toast.error(err.response?.data?.message);
-            })
+            .catch((err) => {})
             .finally(() => {
                 // set({ isLoading: false });
             });
@@ -199,10 +190,7 @@ export const Store = create((set) => ({
                     );
                     // console.log(offset);
                 })
-                .catch((err) => {
-                    if (err.response)
-                        return toast.error(err.response?.data?.message);
-                })
+                .catch(() => {})
                 .finally(() => {
                     // set({ isLoading: false });
                 });

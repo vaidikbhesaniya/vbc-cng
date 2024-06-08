@@ -24,6 +24,7 @@ export const Login = () => {
             },
             navigate
         );
+        localStorage.setItem("loginData", JSON.stringify(loginData));
         setLoginData({
             email: "",
             password: "",

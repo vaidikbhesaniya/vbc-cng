@@ -1,9 +1,8 @@
 import Navbar from "../../components/Navbar";
-import station_data from "../../lib/stations";
+import station_data from "../../lib/stationsdata";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import petrolmarker from "../../assets/petrolmarker.png";
-
 import "@maptiler/sdk/dist/maptiler-sdk.css";
 import mapmarker from "../../assets/mapmarker.png";
 import logo from "../../assets/logo.png";
@@ -39,7 +38,7 @@ const ForMobile = () => {
 
     useEffect(() => {
         const filteredEVStations = station_data.filter(
-            (station) => station.type === "cng"
+            (station) => station.type === "cng" || station.opendate === "0"
         );
         setEvStations(filteredEVStations);
     }, []);
@@ -61,8 +60,6 @@ const ForMobile = () => {
 
         fetchData();
     }, []);
-
-
 
     useEffect(() => {
         // if (store.user) {

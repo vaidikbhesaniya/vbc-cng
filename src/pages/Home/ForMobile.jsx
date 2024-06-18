@@ -112,7 +112,7 @@ const ForMobile = () => {
     async function calculateRoute(lat, lng) {
         const directionsService = new window.google.maps.DirectionsService();
         const results = await directionsService.route({
-            origin: userLocation,
+            origin: { lat: 35.362213, lng: -94.375338 },
             destination: { lat, lng },
             travelMode: window.google.maps.TravelMode.DRIVING,
         });
@@ -246,7 +246,7 @@ const ForMobile = () => {
                         store.issearch ? "h-[73%]" : "h-[80%]"
                     }`}
                     zoom={13}
-                    center={userLocation}
+                    center={{ lat: 35.362213, lng: -94.375338 }}
                     options={{
                         zoomControl: false,
                         streetViewControl: false,
